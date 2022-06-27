@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
-import './index.css';
 import Logo from './../../assets/images/logo.png';
+import './index.css';
 
 const Navbar = () => {
 	const [showLinks, setShowLinks] = useState(false);
