@@ -18,6 +18,13 @@ const App = () => {
 				<Route path="/shop/:category/:slug" element={<SingleProduct />} />
 			</Routes>
 			<Footer />
+			<div
+				hidden
+				id="snipcart"
+				data-api-key="YTMxODRjMzktMWQ0Ni00YTM4LTk0ZDctZTYzNmJjNDliNTVmNjM3ODY0NTQxMjU1NTcxMzY1"
+				data-config-modal-style="side"
+				currency="usd"
+			></div>
 		</div>
 	);
 };
