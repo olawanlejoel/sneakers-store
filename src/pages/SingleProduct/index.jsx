@@ -5,6 +5,9 @@ import { request } from 'graphql-request';
 
 import './index.css';
 
+const API_KEY = process.env.REACT_APP_API_KEY;
+const API_URL = `https://api-us-east-1.graphcms.com/v2/${API_KEY}/master`;
+
 const SingleProduct = () => {
 	const [product, setProduct] = useState(null);
 	const navigate = useNavigate();
@@ -14,7 +17,7 @@ const SingleProduct = () => {
 	useEffect(() => {
 		const fetchProduct = async () => {
 			const { shoe } = await request(
-				'https://api-us-east-1.graphcms.com/v2/cl4peqmpb1lqu01xnbuy06dan/master',
+				API_URL,
 				`
 		{ 
 			shoe(where: {slug: "${slug}"}) {

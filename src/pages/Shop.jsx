@@ -3,6 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { request } from 'graphql-request';
 
+const API_KEY = process.env.REACT_APP_API_KEY;
+const API_URL = `https://api-us-east-1.graphcms.com/v2/${API_KEY}/master`;
+
+
 const Shop = () => {
 	const [products, setProducts] = useState([]);
 
@@ -11,7 +15,7 @@ const Shop = () => {
 	useEffect(() => {
 		const fetchSneakers = async () => {
 			const { shoes } = await request(
-				'https://api-us-east-1.graphcms.com/v2/cl4peqmpb1lqu01xnbuy06dan/master',
+				API_URL,
 				`
          { 
             shoes(first: 50) {

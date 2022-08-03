@@ -5,13 +5,16 @@ import { request } from 'graphql-request';
 
 import './index.css';
 
+const API_KEY = process.env.REACT_APP_API_KEY;
+const API_URL = `https://api-us-east-1.graphcms.com/v2/${API_KEY}/master`;
+
 const Categories = () => {
 	const [categories, setCategories] = useState([]);
 
 	useEffect(() => {
 		const fetchCategories = async () => {
 			const { categories } = await request(
-				'https://api-us-east-1.graphcms.com/v2/cl4peqmpb1lqu01xnbuy06dan/master',
+				API_URL,
 				`
 	      {
 	         categories {
