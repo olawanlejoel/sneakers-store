@@ -39,6 +39,10 @@ const Navbar = () => {
 						</div>
 					</div>
 				</div>
+				<div>
+					<span class="snipcart-items-count">0</span> |
+					<span class="snipcart-total-price">$0.00</span>
+				</div>
 				<div className="navbar-links-container" ref={linksRef}>
 					<ul className="navbar-links">
 						<li>

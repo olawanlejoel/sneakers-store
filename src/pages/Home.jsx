@@ -52,7 +52,7 @@ const Home = () => {
 							<img src={product.image.url} className="product-img" alt="" />
 							<div className="product-content">
 								<div className="flex-row">
-									<Link to={`${product.category.slug}/${product.slug}`}>
+									<Link to={`shop/${product.category.slug}/${product.slug}`}>
 										<h3>{product.name})</h3>
 									</Link>
 									<p className="price">${product.price}</p>
